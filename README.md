@@ -28,3 +28,14 @@ name_of_project
 * Parts of an app:
   * `views.py` - Views. Generically, routes. 
   * `urls.py` - Annoyingly, this must be manually created. This contains url routes that are usually decorators in Flask. Import the local `views.py`. So while flask handles routes and urls in one file, Django does this in two. The "master" `urls.py` will "import" all other module-level `urls.py` files with the `include()` function. 
+
+
+### 3. Templates
+
+* Django automatically searches for a folder called `/templates` within each app. Within that, create a new folder named the name of the original app. Yes, this looks redundant. i.e.:
+
+```
+blog
+|__ templates
+    |__ blog
+```
